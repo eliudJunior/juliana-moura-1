@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Color Palette - Editorial Premium */
+  --color-base: #FAF9F6; /* Off-white/Cream */
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F0EDE5;
+  --color-text: #1C1C1C; /* Charcoal profundo */
+  --color-text-muted: #666666;
+  --color-accent: #B8735C; /* Terracota suave */
+  --color-accent-dark: #965B46;
+  --color-accent-alt: #8C7B5D; /* Dourado/Bege envelhecido */
+  --color-accent-olive: #565B45; /* Verde oliva profundo */
+
+  /* Typography */
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Transitions */
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-base);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: normal; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
+.text-center { text-align: center; }
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+.btn-primary { background: var(--color-text); color: var(--color-base); }
+.btn-primary:hover { background: var(--color-accent); }
+.btn-outline { background: transparent; border: 1px solid var(--color-text); color: var(--color-text); }
+.btn-outline:hover { background: var(--color-text); color: var(--color-base); }
+
+.fade-in { animation: fadeIn 1s ease forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }

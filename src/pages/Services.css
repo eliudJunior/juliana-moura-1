@@ -1,0 +1,140 @@
+.page-layout {
+  padding-top: 80px; /* Offset for fixed header */
+}
+
+.page-header {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  color: var(--color-base);
+  text-align: center;
+}
+
+.page-title {
+  color: var(--color-base);
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .editorial-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+  
+  .editorial-grid.reverse .editorial-content {
+    order: 2;
+  }
+  
+  .editorial-grid.reverse .editorial-images {
+    order: 1;
+  }
+}
+
+.editorial-content h2 {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.editorial-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.editorial-content p {
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 1.5rem;
+}
+
+.service-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.service-item h3 {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.service-price {
+  font-family: var(--font-body);
+  color: var(--color-accent-dark);
+  font-weight: 500;
+}
+
+.service-item p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.editorial-images {
+  position: relative;
+  height: 600px;
+}
+
+.img-main {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: -20px 20px 0 var(--color-surface-secondary);
+}
+
+.img-secondary {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border: 10px solid var(--color-base);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
