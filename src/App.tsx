@@ -8,7 +8,7 @@ import Contato from './pages/Contato';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/juliana-moura-1/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
